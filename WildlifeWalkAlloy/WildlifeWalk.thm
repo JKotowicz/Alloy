@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Beaver"/>
+   <type name="Carver"/>
+   <type name="Connor"/>
+   <type name="Coyote"/>
+   <type name="Eagle"/>
+   <type name="Fox"/>
+   <type name="Goose"/>
+   <type name="Int"/>
+   <type name="Jim"/>
+   <type name="Joanna"/>
+   <type name="Jones"/>
+   <type name="Marjorie"/>
+   <type name="Mike"/>
+   <type name="Olivia"/>
+   <type name="Patricia"/>
+   <type name="Paul"/>
+   <type name="Peter"/>
+   <type name="Pheasant"/>
+   <type name="Porter"/>
+   <type name="Rabbit"/>
+   <type name="Sandra"/>
+   <type name="Swan"/>
+   <type name="Tom"/>
+   <type name="univ"/>
+   <type name="White"/>
+   <type name="WildTurkey"/>
+   <type name="Woodchuck"/>
+   <type name="fun/String"/>
+   <type name="seq/Int"/>
+</node>
+
+<node style="Bold" color="Red">
+   <type name="Couple"/>
+</node>
+
+<node visible="no">
+   <type name="Animal"/>
+   <type name="Bird"/>
+   <type name="FemaleName"/>
+   <type name="MaleName"/>
+   <type name="SurName"/>
+</node>
+
+<edge visible="no">
+   <relation name="next"> <type name="Animal"/> <type name="Animal"/> </relation>
+   <relation name="next"> <type name="Bird"/> <type name="Bird"/> </relation>
+   <relation name="next"> <type name="FemaleName"/> <type name="FemaleName"/> </relation>
+   <relation name="next"> <type name="MaleName"/> <type name="MaleName"/> </relation>
+   <relation name="next"> <type name="SurName"/> <type name="SurName"/> </relation>
+   <relation name="prev"> <type name="Animal"/> <type name="Animal"/> </relation>
+   <relation name="prev"> <type name="Bird"/> <type name="Bird"/> </relation>
+   <relation name="prev"> <type name="FemaleName"/> <type name="FemaleName"/> </relation>
+   <relation name="prev"> <type name="MaleName"/> <type name="MaleName"/> </relation>
+</edge>
+
+<edge visible="no" attribute="no">
+   <relation name="prev"> <type name="SurName"/> <type name="SurName"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="animal"> <type name="Couple"/> <type name="Animal"/> </relation>
+   <relation name="bird"> <type name="Couple"/> <type name="Bird"/> </relation>
+   <relation name="husband"> <type name="Couple"/> <type name="MaleName"/> </relation>
+   <relation name="surname"> <type name="Couple"/> <type name="SurName"/> </relation>
+   <relation name="wife"> <type name="Couple"/> <type name="FemaleName"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

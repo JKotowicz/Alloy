@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="Step"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Food"/>
+   <type name="Int"/>
+   <type name="Step"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+   <set name="$addBasicEffective_bf" type="BasicFood"/>
+   <set name="$addBasicEffective_st" type="Step"/>
+   <set name="First" type="ordering/Ord"/>
+   <set name="Next" type="ordering/Ord"/>
+</node>
+
+<node color="Blue">
+   <type name="BasicFood"/>
+</node>
+
+<node color="Red">
+   <type name="Recipe"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <type name="FDB"/>
+</node>
+
+<edge color="Blue" style="Dashed" label="">
+   <relation name="foods"> <type name="FDB"/> <type name="Food"/> </relation>
+</edge>
+
+<edge color="Red" style="Bold" label="">
+   <relation name="ingredients"> <type name="Recipe"/> <type name="Food"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
